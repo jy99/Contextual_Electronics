@@ -1,0 +1,212 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:GTB_custom
+LIBS:GTB_SMD-cache
+EELAYER 27 0
+EELAYER END
+$Descr USLedger 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "Getting to Blinky (SMD)"
+Date "1 feb 2014"
+Rev ""
+Comp "Joseph Young"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C C1
+U 1 1 52E888AF
+P 7000 6250
+F 0 "C1" H 7000 6350 40  0000 L CNN
+F 1 "1U" H 7006 6165 40  0000 L CNN
+F 2 "~" H 7038 6100 30  0000 C CNN
+F 3 "~" H 7000 6250 60  0000 C CNN
+	1    7000 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 52E888BF
+P 7000 5400
+F 0 "R1" V 7080 5400 40  0000 C CNN
+F 1 "470K" V 7007 5401 40  0000 C CNN
+F 2 "~" V 6930 5400 30  0000 C CNN
+F 3 "~" H 7000 5400 30  0000 C CNN
+	1    7000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L VR VR1
+U 1 1 52E88911
+P 7000 4500
+F 0 "VR1" V 7060 4454 40  0000 C TNN
+F 1 "VR" V 7000 4500 40  0000 C CNN
+F 2 "~" H 7000 4500 60  0000 C CNN
+F 3 "~" H 7000 4500 60  0000 C CNN
+	1    7000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 52E88AE4
+P 9400 5400
+F 0 "R2" V 9480 5400 40  0000 C CNN
+F 1 "1K" V 9407 5401 40  0000 C CNN
+F 2 "~" V 9330 5400 30  0000 C CNN
+F 3 "~" H 9400 5400 30  0000 C CNN
+	1    9400 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 52E88B13
+P 9400 6150
+F 0 "D1" H 9400 6250 50  0000 C CNN
+F 1 "LED" H 9400 6050 50  0000 C CNN
+F 2 "~" H 9400 6150 60  0000 C CNN
+F 3 "~" H 9400 6150 60  0000 C CNN
+	1    9400 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 4750 7000 5150
+Wire Wire Line
+	6450 3950 8550 3950
+Text GLabel 6450 3950 0    60   Input ~ 0
+VBAT
+Text GLabel 6400 6850 0    60   Input ~ 0
+GND
+Wire Wire Line
+	7000 5650 7000 6050
+Wire Wire Line
+	7000 6450 7000 6850
+Wire Wire Line
+	6400 6850 9400 6850
+Wire Wire Line
+	9400 5650 9400 5950
+Wire Wire Line
+	9400 6850 9400 6350
+Connection ~ 7000 6850
+Text GLabel 6500 3150 0    60   Input ~ 0
+VBAT
+Text GLabel 7700 3150 2    60   Input ~ 0
+GND
+Wire Wire Line
+	7350 3150 7700 3150
+Wire Wire Line
+	7700 3150 7700 3100
+$Comp
+L BATTERY BT1
+U 1 1 52E88D6D
+P 7050 3150
+F 0 "BT1" H 7050 3350 50  0000 C CNN
+F 1 "BATTERY" H 7050 2960 50  0000 C CNN
+F 2 "~" H 7050 3150 60  0000 C CNN
+F 3 "~" H 7050 3150 60  0000 C CNN
+	1    7050 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3150 6750 3150
+Wire Wire Line
+	8200 3950 8200 4400
+Connection ~ 7000 3950
+Wire Wire Line
+	8550 3950 8550 4400
+Connection ~ 8200 3950
+Wire Wire Line
+	9100 5100 9400 5100
+Wire Wire Line
+	9400 5100 9400 5150
+Wire Wire Line
+	8200 5850 8200 6850
+Connection ~ 8200 6850
+$Comp
+L 7555 U1
+U 1 1 52E89512
+P 8300 5350
+F 0 "U1" H 7900 5050 60  0000 C CNN
+F 1 "7555" H 8300 5550 60  0000 C CNN
+F 2 "" H 8300 5350 60  0000 C CNN
+F 3 "" H 8300 5350 60  0000 C CNN
+	1    8300 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4900 7000 4900
+Connection ~ 7000 4900
+Wire Wire Line
+	7550 5100 7300 5100
+Wire Wire Line
+	7300 5100 7300 5800
+Wire Wire Line
+	7000 5800 7550 5800
+Connection ~ 7000 5800
+Wire Wire Line
+	7550 5800 7550 5300
+Connection ~ 7300 5800
+$Comp
+L VCC #PWR01
+U 1 1 52EC8DA7
+P 5650 3150
+F 0 "#PWR01" H 5650 3250 30  0001 C CNN
+F 1 "VCC" H 5650 3250 30  0000 C CNN
+F 2 "" H 5650 3150 60  0000 C CNN
+F 3 "" H 5650 3150 60  0000 C CNN
+	1    5650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3100 5650 3150
+Wire Wire Line
+	5650 3150 6250 3150
+$Comp
+L GND #PWR02
+U 1 1 52EC8DD4
+P 8650 3200
+F 0 "#PWR02" H 8650 3200 30  0001 C CNN
+F 1 "GND" H 8650 3130 30  0001 C CNN
+F 2 "" H 8650 3200 60  0000 C CNN
+F 3 "" H 8650 3200 60  0000 C CNN
+	1    8650 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3150 8650 3150
+Wire Wire Line
+	8650 3150 8650 3250
+Wire Wire Line
+	7000 3950 7000 4250
+$EndSCHEMATC
